@@ -32,6 +32,7 @@ The MDP iteratively updates the value of each state until convergence, producing
 TrafficLight.py	
 
 ├── value_iteration() # Core algorithm computing value and policy tables (0=TL1 green, 1=TL2 green).
+					
 					# Select best action based on the computed rewards.
 	
 ├── next_state_and_reward() # Computes transitions given current state and action
@@ -64,9 +65,9 @@ where:
 - \( R(s, a, s') \): immediate reward from the resulting traffic condition
 
 The algorithm repeats these updates until the change in value between iterations,
-denoted \( \Delta = |V_{\text{new}}(s) - V_{\text{old}}(s)| \), falls below a small threshold \( \theta = 10^{-6} \).
+denoted $$ \( \Delta = |V_{\text{new}}(s) - V_{\text{old}}(s)| \), falls below a small threshold \( \theta = 10^{-6} \) $$.
 
-Once the values converge, the **optimal policy** \( \pi^*(s) \) is derived as:
+Once the values converge, the **optimal policy** $$\( \pi^*(s) \)$$ is derived as:
 $$
 \pi^*(s) = \arg\max_a Q(s, a)
 $$
