@@ -58,16 +58,20 @@ where:
 
 - \( V(s) \): value of being in state \( s \)
 - \( a \): action (which light is green)
-- \( \gamma \): discount factor (0.9 used here)
+- \( gamma \): discount factor (0.9 used here)
 - \( P(s' \mid s, a) \): probability of transitioning to next state \( s' \) given action \( a \)
 - \( R(s, a, s') \): immediate reward from the resulting traffic condition
 
-The algorithm repeats these updates until the change in value between iterations,
-denoted $$ Delta = |V_{\text{new}}(s) - V_{\text{old}}(s)| $$, falls below a small threshold \( \theta = 0.001 \).
+The algorithm repeats these updates until the change in value between iterations, Delta falls below a small threshold \( theta = 0.001 \) denoted: 
 
-Once the values converge, the **optimal policy** $$ pi^*(s) $$ is derived as:
+$$ 
+Delta = |V_{\text{new}}(s) - V_{\text{old}}(s)| 
 $$
-\pi^*(s) = \arg\max_a Q(s, a)
+
+Once the values converge, the **optimal policy**  \( pi^*(s) \) is derived as:
+
+$$
+pi^*(s) = \arg\max_a Q(s, a)
 $$
 
 where
@@ -93,7 +97,7 @@ $$
 - `v_state matrix` → Computed value function for each state.		
 - Optional visualization:	
 - Showing the v_state in Line-Graph view for road2_cars = 0, 5, 10, 15, 20, 25 	
-- Showing part of optimal action matrix in bar view (lightgreen = TL1 green, lightcoral = TL2 green).		
+- Showing part of optimal action matrix in bar view (`lightgreen` = TL1 green, `lightcoral` = TL2 green).		
 		
 ---		
 		
