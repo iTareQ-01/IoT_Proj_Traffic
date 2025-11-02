@@ -31,7 +31,7 @@ def next_state_and_reward(n_road1, n_road2, a, arriv_road1_road2):
         n_road1_s_dash = n_road1 - passed1 + i
         n_road2_s_dash = n_road2 + j
     else:
-        passed2 = min(n_road2, 4)
+        passed2 = min(n_road2, 2)
         n_road1_s_dash = n_road1 + i
         n_road2_s_dash = n_road2 - passed2 + j
 
