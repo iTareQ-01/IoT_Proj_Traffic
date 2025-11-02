@@ -105,7 +105,17 @@ $$
 <img width="1557" height="700" alt="policy_bar" src="https://github.com/user-attachments/assets/06949d64-3f9f-4e4d-a826-a73cb53852a6" />
 
 
-- Showing part of optimal action matrix in bar view (`lightgreen` = TL1 green, `lightcoral` = TL2 green).		
+- Showing part of optimal action matrix in bar view (`lightgreen` = TL1 green, `lightcoral` = TL2 green).	
+
+
+- As we can see the TL1 green is the dominant through the policy and that's some how logical as the road1 is the one has higher rate of car_arrive and also higher rate of passing car out. 
+- We will try now to change the parameters a little and make road2 has rate of passing cars out `= min(n_road2, 4)` , not `= min(n_road2, 2)` and see the results.
+
+
+- Showing the v_state in Line-Graph view for road2_cars = 0, 5, 10, 15, 20, 25 	
+
+
+- Showing part of optimal action matrix in bar view (`lightgreen` = TL1 green, `lightcoral` = TL2 green).	
 		
 ---		
 		
