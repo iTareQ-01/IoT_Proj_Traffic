@@ -110,10 +110,10 @@ $$
 
 - As we can see the TL1 green is the dominant through the policy and that's some how logical as the road1 is the one has higher rate of car_arrive and also higher rate of passing car out. 
 - We will try now to change the parameters a little and make road2 has rate of passing cars out `= min(n_road2, 4)` , not `= min(n_road2, 2)` and see the results.
-
+<img width="827" height="538" alt="v_state_plot" src="https://github.com/iTareQ-01/IoT_Proj_Traffic/blob/main/v_state_plot2.png" />
 
 - Showing the v_state in Line-Graph view for road2_cars = 0, 5, 10, 15, 20, 25 	
-
+<img width="1557" height="700" alt="policy_bar" src="https://github.com/iTareQ-01/IoT_Proj_Traffic/blob/main/policy_bar2.png" />
 
 - Showing part of optimal action matrix in bar view (`lightgreen` = TL1 green, `lightcoral` = TL2 green).	
 		
