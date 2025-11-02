@@ -98,9 +98,11 @@ $$
 
 
 - Optional visualization:	
+<img width="827" height="538" alt="v_state_plot" src="https://github.com/user-attachments/assets/8bbb5026-8911-4d53-a458-24a0fac6015a" />
 
 
 - Showing the v_state in Line-Graph view for road2_cars = 0, 5, 10, 15, 20, 25 	
+<img width="1557" height="700" alt="policy_bar" src="https://github.com/user-attachments/assets/06949d64-3f9f-4e4d-a826-a73cb53852a6" />
 
 
 - Showing part of optimal action matrix in bar view (`lightgreen` = TL1 green, `lightcoral` = TL2 green).		
