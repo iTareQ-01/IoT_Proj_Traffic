@@ -29,7 +29,8 @@ The MDP iteratively updates the value of each state until convergence, producing
 ---		
 		
 ## 🧱 Code Structure		
-TrafficLight.py		
+TrafficLight.py	
+
 ├── value_iteration() # Core algorithm computing value and policy tables (0=TL1 green, 1=TL2 green).
 					# Select best action based on the computed rewards.
 	
@@ -45,26 +46,37 @@ TrafficLight.py
 ---		
 		
 ## Algorithm Description		
-The **Value Iteration Algorithm** is used to solve for the optimal policy.		
-		
-At each iteration:		
-\[		
-V(s) \leftarrow \max_a \sum_{s'} P(s'|s,a) [R(s,a,s') + \gamma V(s')]		
-\]		
-		
-Where:		
-- \( V(s) \) = value of being in state s		
-- \( a \) = action (which light is green)		
-- \( \gamma \) = discount factor (0.9 used here)		
-- \( P(s'|s,a) \) = probability of moving to next state s' given action a		
-- \( R(s,a,s') \) = reward of resulting traffic condition		
-		
-The algorithm updates values until the difference between iterations (`delta`) is below a threshold (`θ = 1e-6`).		
-The **policy** is then derived as:		
-\[		
-\pi(s) = \arg\max_a Q(s,a)		
-\]		
-where \( Q(s,a) = \sum_{s'} P(s'|s,a)[R + \gamma V(s')] \).		
+The **Value Iteration Algorithm** is used to solve for the optimal policy.
+
+At each iteration, the value of every state \( s \) is updated using:
+
+$$
+V(s) \leftarrow \max_a \sum_{s'} P(s' \mid s, a)
+\left[ R(s, a, s') + \gamma V(s') \right]
+$$
+
+where:
+
+- \( V(s) \): value of being in state \( s \)
+- \( a \): action (which light is green)
+- \( \gamma \): discount factor (0.9 used here)
+- \( P(s' \mid s, a) \): probability of transitioning to next state \( s' \) given action \( a \)
+- \( R(s, a, s') \): immediate reward from the resulting traffic condition
+
+The algorithm repeats these updates until the change in value between iterations,
+denoted \( \Delta = |V_{\text{new}}(s) - V_{\text{old}}(s)| \), falls below a small threshold \( \theta = 10^{-6} \).
+
+Once the values converge, the **optimal policy** \( \pi^*(s) \) is derived as:
+$$
+\pi^*(s) = \arg\max_a Q(s, a)
+$$
+
+where
+
+$$
+Q(s, a) = \sum_{s'} P(s' \mid s, a)
+\left[ R(s, a, s') + \gamma V(s') \right]
+$$		
 		
 ---		
 		
