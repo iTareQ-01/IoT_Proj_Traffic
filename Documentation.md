@@ -31,15 +31,15 @@ The MDP iteratively updates the value of each state until convergence, producing
 ## 🧱 Code Structure		
 TrafficLight.py	
 
-├── value_iteration() # Select best action & Core algorithm computing value and policy tables (0=TL1 green, 1=TL2 green).
+├── `value_iteration()` # Select best action & Core algorithm computing value and policy tables (0=TL1 green, 1=TL2 green).
 	
-├── next_state_and_reward() # Computes transitions given current state and action
+├── `next_state_and_reward()` # Computes transitions given current state and action
 
-├── reward_from_counts() # Defines reward based on total car count	
+├── `reward_from_counts()` # Defines reward based on total car count	
 
 ├── Visualization Section: # Optional Matplotlib charts for policy/value
 
-├── main() # Runs computation and saves results				
+├── `main()` # Runs computation and saves results				
 		
 		
 ---		
@@ -94,9 +94,15 @@ $$
 		
 **Outputs**		
 - `policy matrix` → Optimal action for each state (matrix of size 41×26).		
-- `v_state matrix` → Computed value function for each state.		
+- `v_state matrix` → Computed value function for each state.
+
+
 - Optional visualization:	
+
+
 - Showing the v_state in Line-Graph view for road2_cars = 0, 5, 10, 15, 20, 25 	
+
+
 - Showing part of optimal action matrix in bar view (`lightgreen` = TL1 green, `lightcoral` = TL2 green).		
 		
 ---		
